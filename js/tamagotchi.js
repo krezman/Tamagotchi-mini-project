@@ -1,7 +1,7 @@
 let load = document.addEventListener("DOMContentLoaded", () => {
 
 
-
+let nameing = document.querySelector("#name")
 let hungerNumber = document.querySelector("#hungerNumber")
 let sleepNumber = document.querySelector("#sleepNumber")
 let boredomNumber = document.querySelector("#boredomNumber")
@@ -36,5 +36,12 @@ class Pet {
   }
 }
 
+let newName = prompt("What shall we name them?"); // Allow the user to name the pet
+  nameing.insertAdjacentText("beforeend", newName); // Insert the chosen name on the webpage
+  const newPet = new Pet(newName) // Instansiating the new pet via the pet class created 
+  hungerNumber.innerText = 0
+  sleepNumber.innerText = 0
+  boredomNumber.innerText = 0
+  ageNumber.innerText = 0
 
 })
