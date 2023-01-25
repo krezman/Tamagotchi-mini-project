@@ -1,5 +1,10 @@
-// let load = document.addEventListener("DOMContentLoaded", () => {
+/// Making the background gif load
 
+let load = document.addEventListener("DOMContentLoaded", () => {
+  let background = document.querySelector("#ship")
+})
+
+/// Creating ways for the class to update the stat numbers associated with the class
 
 let nameing = document.querySelector("#name")
 let hungerNumber = document.querySelector("#hungerNumber")
@@ -8,6 +13,7 @@ let boredomNumber = document.querySelector("#boredomNumber")
 let ageNumber = document.querySelector("#ageNumber")
 
 
+/// Creating a class for the pet to be created
 
 class Pet {
   constructor (name) {
@@ -31,7 +37,7 @@ class Pet {
   if (this.sleepiness > 9) {
       loseGame2()
     }
-    this.sleepiness += 1
+    this.sleepiness += 2
     sleepNumber.innerText = this.sleepiness
    }, 3000)
 
@@ -40,9 +46,9 @@ class Pet {
   if (this.boredom > 9) {
       loseGame3()
     }
-    this.boredom += 1
+    this.boredom += 2
     boredomNumber.innerText = this.boredom
-   }, 2000)
+   }, 5000)
 
 
    setInterval( () => {
@@ -52,9 +58,12 @@ class Pet {
   if (this.age > 5) {
     transform2()
   }
+  if (this.age > 12) {
+    proudParent()
+  }
     this.age += 1
     ageNumber.innerText = this.age
-   }, 8000)
+   }, 2000)
   }
   
   water = () => {
@@ -62,7 +71,7 @@ class Pet {
     hungerNumber.innerText = this.hunger
   }
   sleep = () => {
-    this.sleepiness -= 1
+    this.sleepiness = 0
     sleepNumber.innerText = this.sleepiness
     lightsOff()
     setTimeout(lightsOn, 3000)
@@ -75,7 +84,7 @@ class Pet {
 
 
 
-
+/// Instantiating the new Pet with the prompt name that was entered from the user
 
 let newName = prompt("What shall we name them?"); // Allow the user to name the pet
   nameing.insertAdjacentText("beforeend", newName); // Insert the chosen name on the webpage
@@ -86,12 +95,14 @@ let newName = prompt("What shall we name them?"); // Allow the user to name the 
   ageNumber.innerText = 0
 
 
+/// Creating a way to target the buttons from the HTML
 
 let waterBtn = document.querySelector("#water")
 let sleepBtn = document.querySelector("#rest")
 let playBtn = document.querySelector("#play")
 
 
+/// Lose game functions
 
 const loseGame = () => {
   alert("You let you pet wilt away...")
@@ -113,6 +124,10 @@ const restartGame = () => {
 }
 
 
+
+
+/// Making the buttons functional
+
   waterBtn.addEventListener("click", newPet.water)
 
   sleepBtn.addEventListener("click", newPet.sleep)
@@ -130,16 +145,36 @@ let adultG = document.querySelector("#adult")
 
 
 
+
+
+/// Transformations
+
+let alert1 = false
+
 const transform1 = () => {
+  if (alert1 === false) {
+  alert("Woah! " + newPet.name + " is no longer just a sprout!")
   babyG.style.display = "none"
   youthG.style.display = "block"
+  alert1 = true
+  }
 }
 
+
+
+alert2 = false
 
 const transform2 = () => {
+  if (alert2 === false) {
+  alert("You're gonna need a really big watering can for this guy...")
   youthG.style.display = "none"
   adultG.style.display = "block"
+  alert2 = true
+  }
 }
+
+
+/// Turning the lights off and on for rest
 
 
 let lights = document.querySelector(".lights")
@@ -151,4 +186,24 @@ const lightsOff = () => {
 
 const lightsOn = () => {
   lights.style.display = "block"
+}
+
+
+/// Win game
+
+alert3 = false
+
+const proudParent = () => {
+  if (alert3 === false) {
+    alert("Wow, they really do grow up so fast...")
+    alert3 = true
+    let answer = prompt("Do you want to try your hand at another little sprout? (yes or no)")
+    let realAnswer = answer.toLocaleUpperCase()
+    if (realAnswer === "YES") {
+      window.location.reload()
+    } else {
+    alert("Well it was fun while it lasted!")
+    window.location.reload()
+  }
+ }
 }
