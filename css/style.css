@@ -1,0 +1,49 @@
+#name {
+  text-align: center;
+  position:absolute;
+  top: 15%;
+  left: 50%;
+}
+
+#stats {
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 45%;
+}
+
+
+#twig {
+  position: absolute;
+  top: -100%;
+  left: -35%;
+}
+
+#ship {
+  width: 100%;
+  height: auto;
+}
+
+#statsText {
+  list-style-type: none;
+  font-size: 30px;
+}
+
+
+#water {
+  position: absolute;
+  bottom: 3%;
+  left: 20%;
+}
+
+#rest {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+}
+
+#play {
+  position: absolute;
+  bottom: 3%;
+  left: 80%;
+}
