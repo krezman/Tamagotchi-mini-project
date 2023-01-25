@@ -1,22 +1,47 @@
 #name {
+  font-family: 'Fredoka One', cursive;
+  font-size: 50px;
+  color: black;
   text-align: center;
   position:absolute;
-  top: 15%;
-  left: 50%;
+  top: 8%;
+  left: 10%;
+  text-shadow: 0 0 10px #edc24a;
 }
 
 #stats {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 25px;
+  color: #edc24a;
   text-align: center;
   position: absolute;
   top: 60%;
-  left: 45%;
+  left: 40%;
 }
 
 
 #twig {
   position: absolute;
   top: -100%;
-  left: -35%;
+  left: -25%;
+}
+
+#youth {
+  position:absolute;
+  top: -85%;
+  left: 20%;
+  height: 65%;
+  width: auto;
+  display: none;
+}
+
+#adult{
+  position: absolute;
+  top: -140%;
+  left:-80%;
+  height: 120%;
+  width: auto;
+  display: none;
 }
 
 #ship {
@@ -32,18 +57,48 @@
 
 #water {
   position: absolute;
-  bottom: 3%;
-  left: 20%;
+  bottom: 40%;
+  left: 30%;
+  background-color: black;
+  color:#edc24a;
+  border-radius: 60px;
+  width: 200px;
+  height: 70px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 25px;
+  box-shadow: 0 0 30px 0 #edc24a,
+                    0 0 80px 0 #edc24a,
+                    0 0 10px 0 #edc24a inset;
 }
 
 #rest {
   position: absolute;
-  bottom: 3%;
+  bottom: 40%;
   left: 50%;
+  background-color: black;
+  color:#edc24a;
+  border-radius: 60px;
+  width: 200px;
+  height: 70px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 25px;
+  box-shadow: 0 0 30px 0 #edc24a,
+                    0 0 80px 0 #edc24a,
+                    0 0 10px 0 #edc24a inset;
 }
 
 #play {
   position: absolute;
-  bottom: 3%;
-  left: 80%;
+  bottom: 40%;
+  left: 70%;
+  background-color: black;
+  color:#edc24a;
+  border-radius: 60px;
+  width: 200px;
+  height: 70px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 25px;
+  box-shadow: 0 0 30px 0 #edc24a,
+                    0 0 80px 0 #edc24a,
+                    0 0 10px 0 #edc24a inset;
 }

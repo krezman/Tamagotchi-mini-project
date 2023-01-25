@@ -6,7 +6,7 @@ let hungerNumber = document.querySelector("#hungerNumber")
 let sleepNumber = document.querySelector("#sleepNumber")
 let boredomNumber = document.querySelector("#boredomNumber")
 let ageNumber = document.querySelector("#ageNumber")
-
+let nightBackground = document.querySelector("#ship")
 
 
 
@@ -17,23 +17,47 @@ class Pet {
     this.sleepiness = 0;
     this.boredom = 0;
     this.age = 0
+
+
    setInterval( () => {
+  if (this.hunger > 9) {
+      loseGame()
+    }
     this.hunger += 2
     hungerNumber.innerText = this.hunger
    }, 2000)
+
+
    setInterval( () => {
+  if (this.sleepiness > 9) {
+      loseGame2()
+    }
     this.sleepiness += 1
     sleepNumber.innerText = this.sleepiness
-   }, 8000)
+   }, 3000)
+
+
    setInterval ( () => {
+  if (this.boredom > 9) {
+      loseGame3()
+    }
     this.boredom += 1
     boredomNumber.innerText = this.boredom
-   }, 7000)
+   }, 2000)
+
+
    setInterval( () => {
+  if (this.age > 2) {
+    transform1()
+  }
+  if (this.age > 5) {
+    transform2()
+  }
     this.age += 1
     ageNumber.innerText = this.age
-   }, 15000)
+   }, 8000)
   }
+  
   water = () => {
     this.hunger -= 1
     hungerNumber.innerText = this.hunger
@@ -48,9 +72,7 @@ class Pet {
   }
 }
 
-let waterBtn = document.querySelector("#water")
-let sleepBtn = document.querySelector("#rest")
-let playBtn = document.querySelector("#play")
+
 
 
 
@@ -62,10 +84,32 @@ let newName = prompt("What shall we name them?"); // Allow the user to name the 
   boredomNumber.innerText = 0
   ageNumber.innerText = 0
 
-  
+
+
+let waterBtn = document.querySelector("#water")
+let sleepBtn = document.querySelector("#rest")
+let playBtn = document.querySelector("#play")
 
 
 
+const loseGame = () => {
+  alert("You let you pet wilt away...")
+  restartGame()
+}
+
+const loseGame2 = () => {
+  alert("You kept your pet up for way too long... they died from exhaustion.")
+  restartGame()
+}
+
+const loseGame3 = () => {
+  alert("You didn't play with your pet enough and they died from boredom. You're worse than drying paint.")
+  restartGame()
+}
+
+const restartGame = () => {
+    window.location.reload()
+}
 
 
   waterBtn.addEventListener("click", newPet.water)
@@ -73,3 +117,22 @@ let newName = prompt("What shall we name them?"); // Allow the user to name the 
   sleepBtn.addEventListener("click", newPet.sleep)
 
   playBtn.addEventListener("click", newPet.play)
+
+let babyG = document.querySelector("#twig")
+
+let youthG = document.querySelector("#youth")
+
+
+
+let adultG = document.querySelector("#adult")
+
+const transform1 = () => {
+  babyG.style.display = "none"
+  youthG.style.display = "block"
+}
+
+
+const transform2 = () => {
+  youthG.style.display = "none"
+  adultG.style.display = "block"
+}
