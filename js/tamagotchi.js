@@ -1,7 +1,9 @@
 /// Making the background gif load
 
+let background = document.querySelector("#ship")
+
 let load = document.addEventListener("DOMContentLoaded", () => {
-  let background = document.querySelector("#ship")
+  background
 })
 
 /// Creating ways for the class to update the stat numbers associated with the class
@@ -39,7 +41,7 @@ class Pet {
     }
     this.sleepiness += 2
     sleepNumber.innerText = this.sleepiness
-   }, 3000)
+   }, 4000)
 
 
    setInterval ( () => {
@@ -48,7 +50,7 @@ class Pet {
     }
     this.boredom += 2
     boredomNumber.innerText = this.boredom
-   }, 5000)
+   }, 4000)
 
 
    setInterval( () => {
@@ -63,22 +65,32 @@ class Pet {
   }
     this.age += 1
     ageNumber.innerText = this.age
-   }, 2000)
+   }, 6000)
   }
   
   water = () => {
-    this.hunger -= 1
-    hungerNumber.innerText = this.hunger
+    let hungerBase = 0
+    if(this.hunger < 0) {
+      hungerNumber.innerText = hungerBase
+    } else {
+      this.hunger -= 1
+      hungerNumber.innerText = this.hunger
+    }
   }
   sleep = () => {
     this.sleepiness = 0
     sleepNumber.innerText = this.sleepiness
     lightsOff()
-    setTimeout(lightsOn, 3000)
+    setTimeout(lightsOn, 2000)
   }
   play = () => {
-    this.boredom -= 1
-    boredomNumber.innerText = this.boredom
+    let playBase = 0
+    if (this.boredom < 0) {
+      boredomNumber.innerText = playBase
+    } else {
+      this.boredom -= 1
+      boredomNumber.innerText = this.boredom
+    }
   }
 }
 
@@ -105,17 +117,17 @@ let playBtn = document.querySelector("#play")
 /// Lose game functions
 
 const loseGame = () => {
-  alert("You let you pet wilt away...")
+  alert("You let " + newPet.name + " wilt away... GAME OVER dude.")
   restartGame()
 }
 
 const loseGame2 = () => {
-  alert("You kept your pet up for way too long... they died from exhaustion.")
+  alert("You kept " + newPet.name + " up for way too long... they died from exhaustion. GAME OVER silly goose.")
   restartGame()
 }
 
 const loseGame3 = () => {
-  alert("You didn't play with your pet enough and they died from boredom. You're worse than drying paint.")
+  alert("You didn't play with " + newPet.name + " enough and they died from boredom. You're worse than drying paint. GAME OVER.")
   restartGame()
 }
 
@@ -200,6 +212,7 @@ const proudParent = () => {
     let answer = prompt("Do you want to try your hand at another little sprout? (yes or no)")
     let realAnswer = answer.toLocaleUpperCase()
     if (realAnswer === "YES") {
+      alert("Awesome! Lets go again!")
       window.location.reload()
     } else {
     alert("Well it was fun while it lasted!")

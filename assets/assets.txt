@@ -20,3 +20,8 @@ https://es.pixilart.com/art/baby-groot-sr26d9cde2a5b7d?ft=tags&ft_id=
 Lighting source:
 
 https://codersblock.com/blog/creating-glow-effects-with-css/
+
+
+Animation help:
+
+https://www.youtube.com/watch?v=OTlmenOLEow&t=2s

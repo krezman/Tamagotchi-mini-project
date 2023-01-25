@@ -1,11 +1,23 @@
-#name {
+#title {
   font-family: 'Fredoka One', cursive;
-  font-size: 60px;
+  font-size: 40px;
   color: black;
   -webkit-text-stroke: 2px #edc24a;
   text-align: center;
   position:absolute;
   top: 20%;
+  left: 5%;
+  text-shadow: 0 0 50px #edc24a;
+}
+
+#name {
+  font-family: 'Fredoka One', cursive;
+  font-size: 50px;
+  color: black;
+  -webkit-text-stroke: 2px #edc24a;
+  text-align: center;
+  position:absolute;
+  top: 30%;
   left: 10%;
   text-shadow: 0 0 50px #edc24a;
 }
@@ -71,6 +83,7 @@
 #ship {
   width: 100%;
   height: auto;
+  margin: 0px;
 }
 
 #light1 {
@@ -138,7 +151,7 @@
 #water {
   position: absolute;
   bottom: 40%;
-  left: 30%;
+  left: 10%;
   background-color: black;
   color:#edc24a;
   border-radius: 60px;
@@ -154,7 +167,7 @@
 #rest {
   position: absolute;
   bottom: 40%;
-  left: 50%;
+  left: 40%;
   background-color: black;
   color:#edc24a;
   border-radius: 60px;
@@ -181,4 +194,13 @@
   box-shadow: 0 0 30px 0 #edc24a,
                     0 0 80px 0 #edc24a,
                     0 0 10px 0 #edc24a inset;
+}
+
+#resources {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  font-family: 'Chakra Petch', sans-serif;
+  color: #edc24a;
+  font-size: 15px;
 }
