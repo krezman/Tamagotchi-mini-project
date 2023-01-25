@@ -7,10 +7,6 @@ Space ship background used during night time:
 
 https://imgur.com/gallery/t4u4qd6/comment/661674698
 
-Space ship background for the day time:
-
-https://www.deviantart.com/aryaahumada/art/Spaceship-Boss-Stage-Interior-Pixel-914214360
-
 
 Pet final form:
 
@@ -21,4 +17,6 @@ Pet second form:
 https://es.pixilart.com/art/baby-groot-sr26d9cde2a5b7d?ft=tags&ft_id=
 
 
+Lighting source:
 
+https://codersblock.com/blog/creating-glow-effects-with-css/

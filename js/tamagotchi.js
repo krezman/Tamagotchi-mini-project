@@ -6,7 +6,6 @@ let hungerNumber = document.querySelector("#hungerNumber")
 let sleepNumber = document.querySelector("#sleepNumber")
 let boredomNumber = document.querySelector("#boredomNumber")
 let ageNumber = document.querySelector("#ageNumber")
-let nightBackground = document.querySelector("#ship")
 
 
 
@@ -25,7 +24,7 @@ class Pet {
     }
     this.hunger += 2
     hungerNumber.innerText = this.hunger
-   }, 2000)
+   }, 4000)
 
 
    setInterval( () => {
@@ -65,6 +64,8 @@ class Pet {
   sleep = () => {
     this.sleepiness -= 1
     sleepNumber.innerText = this.sleepiness
+    lightsOff()
+    setTimeout(lightsOn, 3000)
   }
   play = () => {
     this.boredom -= 1
@@ -118,13 +119,16 @@ const restartGame = () => {
 
   playBtn.addEventListener("click", newPet.play)
 
+
+
 let babyG = document.querySelector("#twig")
 
 let youthG = document.querySelector("#youth")
 
-
-
 let adultG = document.querySelector("#adult")
+
+
+
 
 const transform1 = () => {
   babyG.style.display = "none"
@@ -135,4 +139,16 @@ const transform1 = () => {
 const transform2 = () => {
   youthG.style.display = "none"
   adultG.style.display = "block"
+}
+
+
+let lights = document.querySelector(".lights")
+
+
+const lightsOff = () => {
+  lights.style.display = "none"
+}
+
+const lightsOn = () => {
+  lights.style.display = "block"
 }
