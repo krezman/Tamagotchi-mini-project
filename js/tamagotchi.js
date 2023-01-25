@@ -1,4 +1,4 @@
-let load = document.addEventListener("DOMContentLoaded", () => {
+// let load = document.addEventListener("DOMContentLoaded", () => {
 
 
 let nameing = document.querySelector("#name")
@@ -18,23 +18,41 @@ class Pet {
     this.boredom = 0;
     this.age = 0
    setInterval( () => {
-    this.hunger += 1
+    this.hunger += 2
     hungerNumber.innerText = this.hunger
-   }, 8000)
+   }, 2000)
    setInterval( () => {
-    this.sleepiness += 2
+    this.sleepiness += 1
     sleepNumber.innerText = this.sleepiness
-   }, 10000)
+   }, 8000)
    setInterval ( () => {
     this.boredom += 1
     boredomNumber.innerText = this.boredom
-   }, 8000)
+   }, 7000)
    setInterval( () => {
     this.age += 1
     ageNumber.innerText = this.age
    }, 15000)
   }
+  water = () => {
+    this.hunger -= 1
+    hungerNumber.innerText = this.hunger
+  }
+  sleep = () => {
+    this.sleepiness -= 1
+    sleepNumber.innerText = this.sleepiness
+  }
+  play = () => {
+    this.boredom -= 1
+    boredomNumber.innerText = this.boredom
+  }
 }
+
+let waterBtn = document.querySelector("#water")
+let sleepBtn = document.querySelector("#rest")
+let playBtn = document.querySelector("#play")
+
+
 
 let newName = prompt("What shall we name them?"); // Allow the user to name the pet
   nameing.insertAdjacentText("beforeend", newName); // Insert the chosen name on the webpage
@@ -44,4 +62,14 @@ let newName = prompt("What shall we name them?"); // Allow the user to name the 
   boredomNumber.innerText = 0
   ageNumber.innerText = 0
 
-})
+  
+
+
+
+
+
+  waterBtn.addEventListener("click", newPet.water)
+
+  sleepBtn.addEventListener("click", newPet.sleep)
+
+  playBtn.addEventListener("click", newPet.play)
