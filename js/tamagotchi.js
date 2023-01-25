@@ -97,7 +97,7 @@ class Pet {
 
 
 /// Instantiating the new Pet with the prompt name that was entered from the user
-
+alert('Welcome to the "Nursery." You will be taking care of a newly discovered creature and the goal is to get them to the age of independence. Along the way make sure to not let any of their stats go above 10 or else they will die. Once you get them to the age of 13 they are no longer your responsibility. Have fun and good luck!')
 let newName = prompt("What shall we name them?"); // Allow the user to name the pet
   nameing.insertAdjacentText("beforeend", newName); // Insert the chosen name on the webpage
   const newPet = new Pet(newName) // Instansiating the new pet via the pet class created 
